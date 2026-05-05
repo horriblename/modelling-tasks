@@ -25,9 +25,6 @@ classDiagram
     ReverseInheritances --|> ReverseRelationships
     ReverseRelationships --|> RelationshipCycle
 
-    class SelfRelationships {
-        <<illegal>>
-    }
     class InheritanceCycles {
         <<illegal>>
     }
