@@ -1,0 +1,56 @@
+classDiagram
+    class Property {
+        <<enumeration>>
+    }
+
+    class SelfRelationships
+    class InheritanceCycles
+    class CompositionCycles
+    class DoubleRelationships
+    class MultipleInheritances
+    class ReverseInheritances
+    class ReverseRelationships
+    class SelfInheritances
+    class WrongAssociationLimits
+    class WrongCompositionLimits
+    class InvalidInheritanceLimits
+
+    Property <|-- SelfRelationships
+    Property <|-- InheritanceCycles
+    Property <|-- CompositionCycles
+    Property <|-- DoubleRelationships
+    Property <|-- MultipleInheritances
+    Property <|-- ReverseInheritances
+    Property <|-- ReverseRelationships
+    Property <|-- SelfInheritances
+    Property <|-- WrongAssociationLimits
+    Property <|-- WrongCompositionLimits
+    Property <|-- InvalidInheritanceLimits
+
+    SelfInheritances --|> SelfRelationships : specializes
+    SelfInheritances --|> InheritanceCycles : specializes
+
+    class SelfRelationships {
+        <<illegal>>
+    }
+    class InheritanceCycles {
+        <<illegal>>
+    }
+    class CompositionCycles {
+        <<illegal>>
+    }
+    class InvalidInheritanceLimits {
+        <<illegal>>
+    }
+    class ReverseInheritances {
+        <<illegal>>
+    }
+    class SelfInheritances {
+        <<illegal>>
+    }
+    class WrongAssociationLimits {
+        <<illegal>>
+    }
+    class WrongCompositionLimits {
+        <<illegal>>
+    }
