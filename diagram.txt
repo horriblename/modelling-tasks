@@ -1,8 +1,4 @@
 classDiagram
-    class Property {
-        <<enumeration>>
-    }
-
     class SelfRelationships
     class InheritanceCycles
     class CompositionCycles
@@ -14,18 +10,6 @@ classDiagram
     class WrongAssociationLimits
     class WrongCompositionLimits
     class InvalidInheritanceLimits
-
-    Property <|-- SelfRelationships
-    Property <|-- InheritanceCycles
-    Property <|-- CompositionCycles
-    Property <|-- DoubleRelationships
-    Property <|-- MultipleInheritances
-    Property <|-- ReverseInheritances
-    Property <|-- ReverseRelationships
-    Property <|-- SelfInheritances
-    Property <|-- WrongAssociationLimits
-    Property <|-- WrongCompositionLimits
-    Property <|-- InvalidInheritanceLimits
 
     SelfInheritances --|> SelfRelationships : specializes
     SelfInheritances --|> InheritanceCycles : specializes
