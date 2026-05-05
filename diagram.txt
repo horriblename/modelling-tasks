@@ -1,4 +1,5 @@
 classDiagram
+    direction LR
     class SelfRelationships
     class InheritanceCycles
     class CompositionCycles
@@ -11,8 +12,18 @@ classDiagram
     class WrongCompositionLimits
     class InvalidInheritanceLimits
 
-    SelfInheritances --|> SelfRelationships : specializes
-    SelfInheritances --|> InheritanceCycles : specializes
+    SelfRelationships --|> RelationshipCycle
+    SelfInheritances --|> SelfRelationships
+    SelfInheritances --|> InheritanceCycles
+
+    InheritanceCycles --|> RelationshipCycle
+    CompositionCycles --|> RelationshipCycle
+
+    WrongCompositionLimits --|> WrongAssociationLimits
+    InvalidInheritanceLimits --|> WrongAssociationLimits
+
+    ReverseInheritances --|> ReverseRelationships
+    ReverseRelationships --|> RelationshipCycle
 
     class SelfRelationships {
         <<illegal>>
